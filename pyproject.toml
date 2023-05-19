@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "redmage-todo-example"
+version = "0.0.1"
+description = "An example todo application using redmage + htmx"
+authors = ["Scott Russell <me@scottrussell.net>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "redmage_todo_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+redmage = "^0.1.0"
+Jinja2 = "^3.1.2"
+uvicorn = "^0.22.0"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
