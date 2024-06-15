@@ -1,5 +1,4 @@
 from redmage import Component
-from redmage import elements as el
 from starlette.responses import HTMLResponse
 
 
