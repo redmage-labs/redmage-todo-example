@@ -3,16 +3,6 @@ from typing import Optional
 from starlette.convertors import Convertor
 
 
-class RouteConvertor(Convertor):
-    regex = "add|edit|list"
-
-    def convert(self, value: str) -> str:
-        return value
-
-    def to_string(self, value: str) -> str:
-        return value
-
-
 class OptionalInt(Convertor):
     regex = "[0-9]+|None"
 

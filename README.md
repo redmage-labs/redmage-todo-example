@@ -2,8 +2,6 @@
 
 An example todo application using redmage + htmx.
 
-This example was created to demonstrate how you can organize your app by using a single file for each component and Jinja2 as a template engine.
-
 ## Dependencies
 
 ### Javascript
@@ -11,13 +9,11 @@ This example was created to demonstrate how you can organize your app by using a
 * [https://github.com/bigskysoftware/htmx](htmx) (via CDN)
 
 ### Python
-* [https://github.com/pallets/jinja](jinja2)
 * [https://github.com/redmage-labs/redmage](redmage)
 * [https://github.com/encode/uvicorn](uvicorn)
 
 ### CSS and icons
-* [https://github.com/feathericons/feather](feathericons)
-* [https://github.com/picocss/pico](pico.css) (via CDN)
+* [https://missing.style/](missing.css) (via CDN)
 
 ## Run the app
 
