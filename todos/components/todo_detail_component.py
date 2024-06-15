@@ -1,9 +1,12 @@
+import logging
 from redmage import Target
 from redmage import elements as el
 
 from todos.components.todo_base_component import TodoBaseComponent
 
 from ..db import Todo, get_todo, update_todo
+
+logger = logging.getLogger(__name__)
 
 
 class TodoDetailComponent(
@@ -17,7 +20,7 @@ class TodoDetailComponent(
         try:
             todo = get_todo(self.todo_id)
         except Exception as err:
-            print(err)
+            logger.error(err)
             return el.Div("Todo not found")
 
         return el.Div(
