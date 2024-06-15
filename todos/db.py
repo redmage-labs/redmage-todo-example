@@ -22,17 +22,20 @@ def get_todo(id):
     return todo
 
 
-def get_todos():
+def get_todos() -> list[Todo]:
     cur.execute("SELECT * FROM todos")
     todos = [Todo(*todo) for todo in cur.fetchall()]
     return todos
 
 
-def create_todo(message, finished):
+def create_todo(message, finished) -> Todo:
     cur.execute(
         "INSERT INTO todos (message, finished) VALUES (?, ?)", (message, finished)
     )
     con.commit()
+    cur.execute("SELECT * FROM todos WHERE id = last_insert_rowid()")
+    todo = Todo(*cur.fetchone())
+    return todo
 
 
 def update_todo(id, message, finished):

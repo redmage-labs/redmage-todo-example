@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "redmage-todo-example"
-version = "0.0.1"
+version = "0.1.0"
 description = "An example todo application using redmage + htmx"
 authors = ["Scott Russell <me@scottrussell.net>"]
 license = "MIT"
@@ -9,8 +9,7 @@ packages = [{include = "redmage_todo_example"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-redmage = "^0.1.0"
-Jinja2 = "^3.1.2"
+redmage = "^0.5.0"
 uvicorn = "^0.22.0"
 
 
