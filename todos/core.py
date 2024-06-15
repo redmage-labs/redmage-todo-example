@@ -3,11 +3,9 @@ from starlette.convertors import register_url_convertor
 from starlette.routing import Mount
 from starlette.staticfiles import StaticFiles
 
-from .convertors import OptionalInt
 from .router import RouteConvertor
 
 register_url_convertor("Route", RouteConvertor())
-register_url_convertor("Optional[int]", OptionalInt())
 
 app = Redmage()
 
